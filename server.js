@@ -14,7 +14,7 @@ app.get("/cats/felix", function(req, res){
         favorite_food: "Fancy Feast",
         toys: ["yarn", "toy mouse"]
     };
-    res.render("cat_pic", "info");
+    res.render("data", info);
 });
 app.get("/cats/minka", function (req, res) {
     var info = {
@@ -24,7 +24,7 @@ app.get("/cats/minka", function (req, res) {
         favorite_food: "Expensive Tuna",
         toys: ["feather", "socks"]
     };
-    res.render("cat_pic", "info");
+    res.render("data", info);
 });
 app.get("/cats/gismo", function (req, res) {
     var info = {
@@ -34,6 +34,6 @@ app.get("/cats/gismo", function (req, res) {
         favorite_food: "Chicken",
         toys: ["laser pointer", "shoe laces"]
     };
-    res.render("cat_pic", "info");
+    res.render("data", info);
 });
 app.listen(8000);

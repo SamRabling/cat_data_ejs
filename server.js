@@ -7,12 +7,33 @@ app.get("/cats", function(req, res){
     res.render("cats");
 });
 app.get("/cats/felix", function(req, res){
-    res.render()
+    var info = {
+        img: "/images/cat1.jpg",
+        name: "Felix",
+        age: 6,
+        favorite_food: "Fancy Feast",
+        toys: ["yarn", "toy mouse"]
+    };
+    res.render("cat_pic", "info");
 });
 app.get("/cats/minka", function (req, res) {
-    res.render()
+    var info = {
+        img: "/images/cat2.jpg",
+        name: "Minka",
+        age: 18,
+        favorite_food: "Expensive Tuna",
+        toys: ["feather", "socks"]
+    };
+    res.render("cat_pic", "info");
 });
 app.get("/cats/gismo", function (req, res) {
-    res.render()
+    var info = {
+        img: "/images/cat3.jpg",
+        name: "Gismo",
+        age: 1,
+        favorite_food: "Chicken",
+        toys: ["laser pointer", "shoe laces"]
+    };
+    res.render("cat_pic", "info");
 });
 app.listen(8000);
